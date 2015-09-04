@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.xyy.boot.dao.UserDao;
+import com.xyy.boot.model.User;
 
 @Controller
 @EnableAutoConfiguration
@@ -20,9 +21,8 @@ public class SampleController {
 	private UserDao userDao;
 	 @RequestMapping("/test")
 	    @ResponseBody
-	    String home() {
-		 System.out.println(userDao.findByName("a").getName());
-	        return "Hello World!";
+	    User home() {
+	        return userDao.findByName("b");
 	    }
 
 	    public static void main(String[] args) throws Exception {
