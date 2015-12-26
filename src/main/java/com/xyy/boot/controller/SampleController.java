@@ -5,16 +5,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.xyy.boot.dao.UserDao;
 import com.xyy.boot.model.User;
+import com.xyy.boot.service.UserService;
 
 @RestController
 public class SampleController {
 	@Autowired
-	private UserDao userDao;
-	 @RequestMapping("/test")
-	    @ResponseBody
-	    User home() {
-	        return userDao.findByName("b");
-	    }
+	private UserService userService;
+
+	@RequestMapping("/test")
+	@ResponseBody
+	User home() {
+		return userService.getUserByName("b");
+	}
 }
