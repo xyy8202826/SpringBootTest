@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class ServiceMonitor {
-	@AfterReturning("execution(* com.xyy.boot.service.impl.*Impl.*(..))")
+	@AfterReturning("execution(* com.xyy.boot.service.impl.*.*(..))")
 	public void logServiceAccess(JoinPoint joinPoint) {
 		System.out.println("Completed: " + joinPoint);
 	}
