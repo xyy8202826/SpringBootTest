@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.xyy.boot.aop.AspectAnnotation;
 import com.xyy.boot.model.User;
 import com.xyy.boot.service.UserService;
 
@@ -15,7 +16,8 @@ public class SampleController {
 
 	@RequestMapping("/test")
 	@ResponseBody
-	User home() {
+	@AspectAnnotation
+	public User home() {
 		return userService.getUserByName("b");
 	}
 }
