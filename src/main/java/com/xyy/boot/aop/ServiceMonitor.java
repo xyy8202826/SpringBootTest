@@ -22,6 +22,8 @@ public class ServiceMonitor {
 		logger.info("joinPoint.getTarget()-------" + joinPoint.getTarget());
 		logger.info("joinPoint.getSignature()----" + joinPoint.getSignature());
 		logger.info("Completed: -----------------" + joinPoint);
+		
+		
 	}
 	
 	
