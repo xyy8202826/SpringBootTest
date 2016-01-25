@@ -11,8 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 import org.springframework.stereotype.Component;
-@Component
-@WebFilter(filterName="TestFilter",urlPatterns="/*")
+
 /**
  * 
     * @ClassName: TestFilter
@@ -22,6 +21,8 @@ import org.springframework.stereotype.Component;
     * Filter的顺序是按照类名的字母顺序排的
     *
  */
+@Component
+@WebFilter(filterName="TestFilter",urlPatterns="/*")
 public class TestFilter implements Filter {
 	public TestFilter(){
 		System.out.println("TestFilter");
